@@ -1,19 +1,25 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const SinglePost = (props) => {
-    const {userId, id, title, body} = props.post;
-    console.log(props.post);
+    const { userId, id, title, body } = props.post;
+    //console.log(props.post);
     return (
-        
-        <Card>
-            <Card.Header as="h5">{userId}</Card.Header>
+
+        <Card className='mb-2'>
+            <Card.Header as="h5">{id}</Card.Header>
             <Card.Body>
-                <Card.Title>{title}</Card.Title>
+                <Card.Title>User No: {userId}</Card.Title>
+                <Card.Title>Title: {title}</Card.Title>
+
                 <Card.Text>
                     {body}
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                <Link to={`comments/${id}`} >
+                    <Button variant="outline-success" onClick={() => props.detailsBt(id)}>Details</Button>
+                </Link>
+
             </Card.Body>
         </Card>
     );

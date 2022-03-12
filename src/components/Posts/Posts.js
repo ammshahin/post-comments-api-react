@@ -4,6 +4,7 @@ import SinglePost from '../SinglePost/SinglePost';
 
 const Posts = () => {
     const [posts, setPosts] = useState([]);
+    const [clickedPostId, setClickedPostId] = useState(null)
 
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/posts')
@@ -19,12 +20,17 @@ const Posts = () => {
 
     }, [])
 
-    // console.log(posts);
+
+    const handleDetailsButton = (e) =>{
+        setClickedPostId(e);
+    }
+    console.log(clickedPostId);
 
     return (
-        <Container fluid>
+        <Container fluid = "xl" >
+            <h1>All Post</h1>
             {
-                posts.map(p => <SinglePost key={p.id} post={p}></SinglePost>)
+                posts.map(p => <SinglePost key={p.id} post={p} detailsBt = {handleDetailsButton}></SinglePost>)
             }
         </Container>
     );

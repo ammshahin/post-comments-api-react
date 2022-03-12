@@ -1,14 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
 import Posts from './components/Posts/Posts';
-import SinglePost from './components/SinglePost/SinglePost';
+import Comments from './components/Comments/Comments';
+import './App.css';
+
 
 
 function App() {
   return (
+    
     <div>
-      <Posts></Posts>
-      {/* <SinglePost></SinglePost> */}
+      <Routes>
+          <Route path = '/' element = {<Posts/>} />
+          <Route path = '/comments/:id' element = {<Comments/>}/>
+      </Routes>
+      {/* <Posts></Posts> */}
+      
+    
     </div>
   );
 }
