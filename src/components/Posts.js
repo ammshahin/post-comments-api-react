@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
-import SinglePost from '../SinglePost/SinglePost';
+import SinglePost from './SinglePost';
 
 const Posts = () => {
     const [posts, setPosts] = useState([]);

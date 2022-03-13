@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
-import CommentCard from '../comment_card/CommentCard';
+import CommentCard from './CommentCard';
 
 const Comments = () => {
     //const [id, setId] = useState(null);
