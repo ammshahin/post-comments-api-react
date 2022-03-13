@@ -1,13 +1,14 @@
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { Grid } from '@mui/material';
 
 const PostCard = (props) => {
     const { userId, id, title, body } = props.post;
     //console.log(props.post);
     return (
-
-        <Card className='mb-2 bg-secondary text-white'>
+        <Grid item xs={6}>
+             <Card className='mb-2 bg-secondary text-white'>
             <Card.Header as="h5">{id}</Card.Header>
             <Card.Body>
                 <Card.Title>User No: {userId}</Card.Title>
@@ -22,6 +23,8 @@ const PostCard = (props) => {
 
             </Card.Body>
         </Card>
+        </Grid>
+       
     );
 };
 
