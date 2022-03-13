@@ -2,12 +2,12 @@ import React from 'react';
 import { Button, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-const SinglePost = (props) => {
+const PostCard = (props) => {
     const { userId, id, title, body } = props.post;
     //console.log(props.post);
     return (
 
-        <Card className='mb-2'>
+        <Card className='mb-2 bg-secondary text-white'>
             <Card.Header as="h5">{id}</Card.Header>
             <Card.Body>
                 <Card.Title>User No: {userId}</Card.Title>
@@ -17,7 +17,7 @@ const SinglePost = (props) => {
                     {body}
                 </Card.Text>
                 <Link to={`comments/${id}`} >
-                    <Button variant="outline-success" onClick={() => props.detailsBt(id)}>Details</Button>
+                    <Button variant="success" onClick={() => props.detailsBt(id)}>Details</Button>
                 </Link>
 
             </Card.Body>
@@ -25,4 +25,4 @@ const SinglePost = (props) => {
     );
 };
 
-export default SinglePost;
+export default PostCard;

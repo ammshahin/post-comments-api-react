@@ -30,8 +30,8 @@ const Comments = () => {
     console.log(id);
      console.log(comments);
     return (
-        <Container fluid>
-            <h1>Comments</h1>
+        <Container fluid = 'xl'>
+            <h1>Comments of Post: {id.id}</h1>
             {
                 comments.map(comment => <CommentCard id = {comment.id} comment = {comment}></CommentCard>)
             }

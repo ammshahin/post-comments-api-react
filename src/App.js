@@ -7,7 +7,7 @@ import './App.css';
 
 function App() {
   return (
-    <div>
+    <div className='bg-dark'>
       <Routes>
           <Route path = '/' element = {<Posts/>} />
           <Route path = '/comments/:id' element = {<Comments/>}/>
