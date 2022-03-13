@@ -31,7 +31,10 @@ const Comments = () => {
      console.log(comments);
     return (
         <Container fluid = 'xl'>
+            <div className='d-flex justify-content-center p-1 mb-1 position-sticky fixed-top bg-info'>
             <h1>Comments of Post: {id.id}</h1>
+            </div>
+            
             {
                 comments.map(comment => <CommentCard id = {comment.id} comment = {comment}></CommentCard>)
             }

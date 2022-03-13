@@ -6,7 +6,7 @@ const CommentCard = (props) => {
     // console.log(name);
     return (
 
-        <Card className='mb-2'>
+        <Card className='mb-2 bg-success text-light'>
             <Card.Header as="h5">{name}</Card.Header>
             <Card.Body>
                 <Card.Title>{email}</Card.Title>
