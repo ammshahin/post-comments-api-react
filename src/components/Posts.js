@@ -55,7 +55,7 @@ const Posts = () => {
 
             </Grid>
 
-            <Container  fluid = 'md' className='d-flex justify-content-center p-2 position-sticky fixed-bottom '>
+            <Container fluid='md' className='d-flex justify-content-center p-2 position-sticky fixed-bottom '>
                 <Pagination
                     count={pageCount}
                     // defaultPage = {0}
